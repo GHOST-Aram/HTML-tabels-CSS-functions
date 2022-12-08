@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors</title>
+</head>
+<style>
+a[title]{
+    color: purple;
+}
+a[href='github.com']{
+    color: orangered;
+}
+a[href$='.com']{
+    /* text-decoration: line-through; */
+}
+    p::before{
+    content: url(download.png);
+}p::after{
+    /* content: linear-gradient(45deg, red, blue); */
+    content: "Killing Me Softly";
+    height: 100px;
+    width: 100px;
+}
+
+.container{
+    width: 40vw;
+    height: 40vw;
+    background: linear-gradient(45deg, red, blue);
+    margin: auto;
+}
+.container::before{
+    content: '<h1>Headless Box<h1>`;
+}
+/* [src]{
+    width:45px;
+    border-radius:23px;
+} */
+img[src]::before{
+    content:'Image Source';
+    background-color:black;
+    height: 20px;
+    width: 100%;
+}
+img[src='download.png']{
+    /* border: 3px soild red; */
+    height: 50px;
+}
+img[src$='.png']{
+    padding: 20px;
+    background-color: blue;
+}
+[class~='links']{
+    text-decoration: none;
+     font-size: 2rem;
+}
+[lang='i-dont-know']{
+    font-size: 40px;
+    color: red;
+}
+</style>
+<body>
+    <div>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </p>
+    </div>
+    <div class="container">
+        <img src="download.png" alt="">
+    </div>
+    <div class="maintainer">
+        <a class="git link" href="github.com">Got to github</a>
+        <a class="fb-link" href="facebook.com">Got to facebook</a>
+        <a class="gg links" href="google.com">Got to google</a>
+        <a class="tt-link" href="twitter.com">Got to twitter</a>
+    </div>
+    <div lang="en-us en-gb en-au en-ca">Helow world</div>
+    <div lang="i-dont-know">skjksdf</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min-max</title>
+</head>
+<style>
+    *{
+        margin: 0;
+    }
+    body{
+        padding-block-start: calc(var(--block-padding) + clamp(1rem, 5%, 2rem));
+    }
+    :root{
+        --header:2rem;
+        --footer: 3rem;
+        --main: calc(100vh-(calc(var(--footer + var(--header)))));
+        --block-padding:4rem
+    }
+    .container{
+        width:  clamp(300px, 70%, 80vw);
+        margin: auto;
+        background-color: rgb(160, 154, 154);
+        padding: 1rem;
+    }
+    .container div{
+        /* height: 100px; */
+        background-color: orangered;        
+        border-radius: 10px;
+         text-align: justify;
+        
+        padding-block: 10%;
+        margin: max(2vh, 1.5rem) auto;
+        width:  clamp(200px, 80%, 70vw);
+        
+        padding: 1.5rem clamp(1rem, 5%, 3rem);
+    }
+   
+    .box-1 p{
+       font-size: clamp(12px , 12px + 1vw, 1.5rem);
+        color: white;
+    }
+    h1{
+        font-size: calc(13px + 1vw);
+    }
+    header{
+        position: fixed;
+        height:  var(--header);
+        top: 0;
+    }
+    footer{
+        height: var(--footer);
+        bottom: 0;
+        position: relative;
+    }
+    header, footer{
+        background-color: rgb(3, 3, 34);
+        color: grey;
+        text-align: center;
+        left: 0;
+        right: 0;
+        padding-block: 2rem;
+    }
+    main{
+        height: var(--main);
+        margin-block: 1rem;
+    }
+    
+</style>
+<body>
+    <header>
+        <h2>Header</h2>
+    </header>
+    <main>
+        <section>
+            <div class="container">
+                <div class="box-1">
+                    <h1>Paragraph head</h1>
+                    <p>
+                    
+                    Box 1 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempora libero ipsa totam qui. In fuga aspernatur voluptas neque, cum quos optio, eius sunt autem asperiores nobis doloribus illo. Porro in quos molestias placeat dignissimos nisi sed quod omnis quas minus fugit asperiores, similique pariatur odio itaque voluptas dolor fuga sapiente doloribus corrupti nobis. Doloribus reiciendis aperiam, est modi, culpa veritatis, nobis dolore quod perspiciatis odio obcaecati dolorem! Atque nesciunt velit maxime autem, dolore officiis iusto rem tenetur magni exercitationem sequi neque vitae ea perspiciatis illo molestias vero mollitia ab possimus! Sequi earum cupiditate pariatur ipsam eveniet voluptates et voluptas debitis?</p></div>
+                <div class="box-2"><p>Box 2</p></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        pooteer
+    </footer>
+</body>
+</html>

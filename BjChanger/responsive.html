@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive typography</title>
+</head>
+<style>
+    *{
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    a:link{
+        color: rgb(0, 255, 149);
+        text-decoration: none;
+        font-size: 24px;
+    }
+    /* a:visited{
+        color: red;
+        font-size: calc(1rem + 2vw);
+    } */
+    body{
+        background: content-box radial-gradient(red, orangered, orange, yellow);
+        padding-block-start: 60px;
+    }
+    h3{
+        text-align: center;
+        font-size: calc(16px - .2vw);
+        display: list-item;
+        color: brown;
+    }
+    h2{
+        color: brown;
+        display: list-item;
+        counter-increment: h2;
+    }
+    h2::marker{
+        display: list-item;
+        content: "#" counter(h2) " ";
+        color: salmon;
+    }
+    h3::selection, h2::selection{
+        text-shadow: 2px 2px 0 grey;
+        background-color: brown;
+        color: white;
+    }
+    article{
+        width: 80%;
+    }
+    .container{
+        width: 98%;
+        margin: auto;
+        display: grid;
+        grid-template-columns: 30% 1fr;
+        gap: 2rem;
+    }
+    p{
+        font-size: calc(12px + .8vw);
+        color: whitesmoke;  
+        margin-bottom: 4rem; 
+    }
+    p::first-letter{
+        font-size: 3rem;
+    }
+    p::first-line{
+        font-size: 2rem;
+    }
+    p::before{
+        content: "\2605";
+        color: red;
+        font-size: 1.5rem;
+    }
+    *::selection{
+        background-color: #fff;
+        color: brown;
+    }
+    @media (min-width:50rem){
+        h3{
+        font-size: calc(18px + 2vw);
+            
+        }
+    }
+    /* li:empty{
+        background-color: green;
+        height: 40px;
+        border-radius: 9px;
+    } */
+    ul>li:nth-child(2n){
+        background-color: rgb(161, 149, 149);
+    }
+    ul>li:nth-child(odd){
+        background: linear-gradient(to right, red, orangered, orange, yellow);
+        /* color: yellowgreen;? */
+    }
+    ul li::marker{
+        font-size: 200%;
+        color: red;
+    }
+    ol li::marker{
+        content: "\2713";
+        color: red;
+        font-size: 150%;
+    }
+    ol li::after{
+        content: '\2764';
+        color: green;
+        font-size: 200%;
+    }
+  header{
+    height: 90px;
+    position: fixed;
+    left: -10px;
+    right: -10px;
+    top: -30px;;
+    background-color: blue;
+    filter: blur(15px);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, .9);
+    /* filter: brightness(.4); */
+    /* filter: contrast(.4); */
+  }
+
+</style>
+<body>
+    <header>
+
+    </header>
+    <h1>My Application</h1>
+    <div class="container">
+        <nav>
+            <h3>My Projects</h3>
+            <ol>
+                <li><a href="#">Project-1</a></li>
+                <li><a href="#">Project-2</a></li>
+                <li><a href="#">Project-3</a></li>
+                <li class="top-line"><a href="#">Project-4</a></li>
+                <li><a href="#">Project-5</a></li>
+                <li><a href="#">Project-6</a></li>
+                <li><a href="#">Project-7</a></li>
+                <li><a href="#">Project-8</a></li>
+                <li><a href="#">Project-9</a></li>
+                <li class="bottom-line"><a href="#">Project-10</a></li>
+            </0ol>
+        </nav>
+        <article>
+            <h2>Project title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Quisquam temporibus accusamus vel architecto esse error,
+                 nemo similique aliquam repudiandae rem reprehenderit. 
+                 Ea eaque doloribus officia sequi cum voluptas, 
+                 quaerat ipsum delectus modi beatae, enim facilis alias 
+                 ducimus consequatur. Totam quidem fugiat, 
+                placeat sunt a sint dolorem fugit magni eveniet minima.
+            </p>
+            <h2>Project title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Quisquam temporibus accusamus vel architecto esse error,
+                 nemo similique aliquam repudiandae rem reprehenderit. 
+                 Ea eaque doloribus officia sequi cum voluptas, 
+                 quaerat ipsum delectus modi beatae, enim facilis alias 
+                 ducimus consequatur. Totam quidem fugiat, 
+                placeat sunt a sint dolorem fugit magni eveniet minima.
+            </p>
+            <h2>Project title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Quisquam temporibus accusamus vel architecto esse error,
+                 nemo similique aliquam repudiandae rem reprehenderit. 
+                 Ea eaque doloribus officia sequi cum voluptas, 
+                 quaerat ipsum delectus modi beatae, enim facilis alias 
+                 ducimus consequatur. Totam quidem fugiat, 
+                placeat sunt a sint dolorem fugit magni eveniet minima.
+            </p>
+            <h2>Project title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Quisquam temporibus accusamus vel architecto esse error,
+                 nemo similique aliquam repudiandae rem reprehenderit. 
+                 Ea eaque doloribus officia sequi cum voluptas, 
+                 quaerat ipsum delectus modi beatae, enim facilis alias 
+                 ducimus consequatur. Totam quidem fugiat, 
+                placeat sunt a sint dolorem fugit magni eveniet minima.
+            </p>
+            <h2>Project title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Quisquam temporibus accusamus vel architecto esse error,
+                 nemo similique aliquam repudiandae rem reprehenderit. 
+                 Ea eaque doloribus officia sequi cum voluptas, 
+                 quaerat ipsum delectus modi beatae, enim facilis alias 
+                 ducimus consequatur. Totam quidem fugiat, 
+                placeat sunt a sint dolorem fugit magni eveniet minima.
+            </p>
+        </article>
+    </div>
+    <footer>Copyright &copy; My Portfolio</footer>
+</body>
+
+</html>

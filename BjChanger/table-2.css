@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;400;500;700&display=swap');
+*{
+    font-family: 'Work Sans', sans-serif;
+}
+
+:root{
+    --primary-color:rgb(13, 165, 127);
+}
+.bg-primary{
+    background-color: var(--primary-color);
+}
+body{
+    background: linear-gradient(45deg, red,green,blue,orangered,grey);
+}
+.classified{
+    border-right: solid 1px grey;
+    border-bottom: 1px solid grey;
+}
+h4{
+    text-align: center;
+    font-weight: 400;
+}
+table{
+    border-collapse: collapse;
+    width: 90%;
+    margin: auto;
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 24px grey;
+}
+#terrestrial{
+    column-span: 3;
+}
+thead{
+    text-align: left;
+    color: white;
+}
+
+th{
+    font-weight: 400;
+}
+td, th{
+    padding: .5rem;
+}
+tbody tr:nth-child(even){
+    background-color: rgb(0, 140, 255);
+}
+tbody tr:last-of-type{
+    border-bottom: 2px solid var(--primary-color);
+}

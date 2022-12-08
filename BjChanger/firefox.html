@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background: repeating-linear-gradient(-45deg, grey, maroon 10%, orangered 15%);
+    }
+    .container{
+        /* padding:  0 20rem; */
+        /* margin-block-start: 100px;\ */
+        margin-top: 100px;
+        /* margin: auto; */
+        width: max(30vw, 400px);
+        /* height: 50vw; */
+        height: max(30vw, 400px);
+        border-radius: 200px;
+
+        background: conic-gradient(purple 0deg 45deg, red  45deg 90deg,yellow 90deg 120deg, orange 120deg 180deg, green 180deg 240deg, blue 240deg 300deg, grey 300deg 360deg);
+       /* background: conic-gradient(red 0deg 90deg, orange 90deg 180deg, yellow 180deg, green 270deg, blue 360deg); */
+        /* background: grad; */
+        /* background: conic-gradient(red, orange, yellow, green, blue); */
+
+    }
+    section{
+        padding-block: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+    h3,
+    p{
+        padding: .4rem;
+        color: white;
+        border-radius: 3px;
+    }
+    p{font-weight: 400;}
+    #key-1{
+        background-color: purple;
+    }
+    #key-2{
+        background-color: red;
+    }
+    #key-3{
+        background-color: yellow;
+    }
+    #key-4{
+        background-color: orange;
+    }
+    #key-5{
+        background-color: green;
+    }
+    #key-6{
+        background-color: blue;
+    }
+    #key-7{
+        background-color: grey;
+    }
+    @media screen and (max-width:700px){
+        section{
+            flex-direction: column;
+        }
+        .container{
+            width: 60vw;
+            height: 60vw;
+        }
+    }
+    
+</style>
+}
+<body>
+    <section>
+        
+    <div class="container">
+        <!-- <img src="firefox-logo.svg" alt=""> -->
+    </div>
+    <div class="key">
+        <h3>Key</h3>
+        <p id="key-1">Oranges</p>
+        <p id="key-2">Bananas</p>
+        <p id="key-3">Pawpaws</p>
+        <p id="key-4">Apples</p>
+        <p id="key-5">Mangoes</p>
+        <p id="key-6">Guava</p>
+        <p id="key-7">Lemon</p>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;400;500;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+}
+body{
+    background: linear-gradient(120deg,blue, red, green);
+}
+caption{
+    padding: 1rem;
+    color: white;
+}
+.container{
+    width: 80vw;
+    margin: auto;
+
+}
+/* #empty-col{
+    background-color: transparent;
+} */
+section{
+    padding-block: 7rem;
+}
+table{
+    border-collapse: collapse;
+    width: 100%;
+    margin: auto;
+}
+td{
+    font-weight: 100;
+    font-family: monospace;
+    font-size: 16px;
+    white-space: nowrap;
+}
+td,th{
+    padding: 1rem;
+}
+td,th{
+    color: white;
+
+}
+th{
+    background-color: rgb(87, 84, 84);
+    font-weight: 500;
+}
+th:empty{
+    background-color: transparent;
+}
+tbody tr:nth-last-of-type(odd){
+    background-color: rgba(0,0,0,0.3);
+}
+.main-cols{
+    text-align: center;
+}
+.row-heads{
+    text-align: left;
+}
+.sub-cols, td{
+    text-align: right;
+}
+@media only screen and (max-width:900px) {
+    .container{
+       width: 100%;
+    }
+    table{
+        width: 90%;
+    }
+}
+@media only screen and (max-width:800px) {
+
+    td{
+        display: block;
+        font-size: 12px;
+    }
+    th{
+        top: -99999px;
+        position: absolute;
+        left: -99999px;
+    }
+    td{
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    /* Break table to individual tds */
+    tr:nth-of-type(1) td:nth-of-type(1)::before{content: 'Belgium | Antwerp  Trousers';}
+    tr:nth-of-type(1) td:nth-of-type(2)::before{content: 'Belgium | Antwerp  Skirts';}
+    tr:nth-of-type(1) td:nth-of-type(3)::before{content: 'Belgium | Antwerp  Dresses';}
+    tr:nth-of-type(1) td:nth-of-type(4)::before{content: 'Belgium | Antwerp  Bracelets';}
+    tr:nth-of-type(1) td:nth-of-type(5)::before{content: 'Belgium | Antwerp  Rings';}
+
+    tr:nth-of-type(2) td:nth-of-type(1)::before{content: 'Belgium | Gent  Trousers';}
+    tr:nth-of-type(2) td:nth-of-type(2)::before{content: 'Belgium | Gent  Skirts';}
+    tr:nth-of-type(2) td:nth-of-type(3)::before{content: 'Belgium | Gent  Dresses';}
+    tr:nth-of-type(2) td:nth-of-type(4)::before{content: 'Belgium | Gent  Bracelets';}
+    tr:nth-of-type(2) td:nth-of-type(5)::before{content: 'Belgium | Gent  Rings';}
+
+    tr:nth-of-type(3) td:nth-of-type(1)::before{content: 'Belgium | Brusels  Trousers';}
+    tr:nth-of-type(3) td:nth-of-type(2)::before{content: 'Belgium | Brusels  Skirts';}
+    tr:nth-of-type(3) td:nth-of-type(3)::before{content: 'Belgium | Brusels  Dresses';}
+    tr:nth-of-type(3) td:nth-of-type(4)::before{content: 'Belgium | Brusels  Bracelets';}
+    tr:nth-of-type(3) td:nth-of-type(5)::before{content: 'Belgium | Brusels  Rings';}
+
+    tr:nth-of-type(4) td:nth-of-type(1)::before{content: 'The Netherlands | Amsterdam  Trousers';}
+    tr:nth-of-type(4) td:nth-of-type(2)::before{content: 'The Netherlands | Amsterdam  Skirts';}
+    tr:nth-of-type(4) td:nth-of-type(3)::before{content: 'The Netherlands | Amsterdam  Dresses';}
+    tr:nth-of-type(4) td:nth-of-type(4)::before{content: 'The Netherlands | Amsterdam  Bracelets';}
+    tr:nth-of-type(4) td:nth-of-type(5)::before{content: 'The Netherlands | Amsterdam  Rings';}
+
+    tr:nth-of-type(5) td:nth-of-type(1)::before{content: 'The Netherlands | Utrech  Trousers';}
+    tr:nth-of-type(5) td:nth-of-type(2)::before{content: 'The Netherlands | Utrech  Skirts';}
+    tr:nth-of-type(5) td:nth-of-type(3)::before{content: 'The Netherlands | Utrech  Dresses';}
+    tr:nth-of-type(5) td:nth-of-type(4)::before{content: 'The Netherlands | Utrech  Bracelets';}
+    tr:nth-of-type(5) td:nth-of-type(5)::before{content: 'The Netherlands | Utrech  Rings';}
+
+}

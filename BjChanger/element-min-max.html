@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Element sizing</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .container{
+        width: clamp(600px, 80%, 50vw);
+        margin: auto;
+        text-align: center;
+        padding-block: 10rem;
+        background-color: grey;
+    }
+    img{
+        width: min(50%, 30vw, 250px);
+        
+    }
+   
+</style>
+<body>
+    <header></header>
+    <mian>
+        <section>
+            <div class="container">
+                <img src="firefox-logo.svg" alt="">
+                <img src="firefox-logo.svg" alt="">
+                <img src="firefox-logo.svg" alt="">
+            </div>
+        </section>
+    </mian>
+    <footer></footer>
+</body>
+</html>
